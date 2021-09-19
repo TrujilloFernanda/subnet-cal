@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>Calculadora</title>
+</head>
+<body>
+  <div class="container">
+    <div class="row p-4">
+      <div class="card d-block mx-auto">
+        <div class="card-header text-center">
+          <h4 class="card-title">Calculadora</h4>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Dirección IP</span>
+                </div>
+                <input type="text" id="ipAddress" placeholder="Ingresa la dirección IP" class="form-control">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-8">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Máscara de subred</span>
+                </div>
+                <input type="text" id="subnetMask" placeholder="Ingresa la máscara de subred" class="form-control">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">CIDR</span>
+                </div>
+                <input type="text" id="cidr" placeholder="Ingresa el CIDR" class="form-control">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Número de subredes</span>
+                </div>
+                <input type="text" id="subnets" placeholder="Ingresa el número de subredes"  class="form-control">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Número de hosts</span>
+                </div>
+                <input type="text" id="hosts" placeholder="Ingresa el número de hosts"  class="form-control">
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-block btn-primary" onclick="calculate();">Calcular</button>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div>
+      <h3 id="method">Resultado:</h3>
+      <table class="table table-hover table-dark">
+        <tbody>
+          <tr>
+            <th scope="row">IP:</th>
+            <td id="ip"></td>
+          </tr>
+          <tr>
+            <th scope="row">IP en binario:</th>
+            <td id="binaryIP"></td>
+          </tr>
+          <tr>
+            <th scope="row">Clase de IP:</th>
+            <td id="ipClass">
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">IP privada:</th>
+            <td id="privateIP"></td>
+          </tr>
+          <tr>
+            <th scope="row">Máscara de subred:</th>
+            <td id="subnetMaskR"></td>
+          </tr>
+          <tr>
+            <th scope="row">CIDR:</th>
+            <td id="cidrR"></td>
+          </tr>
+          <tr>
+            <th scope="row">Máscara Wildcard:</th>
+            <td id="wildcardMask"></td>
+          </tr>
+          <tr>
+            <th scope="row">Dirección de subred:</th>
+            <td id="subnetAddress"></td>
+          </tr>
+          <tr>
+            <th scope="row">Dirección broadcast:</th>
+            <td id="broadcastAddress"></td>
+          </tr>
+          <tr>
+            <th scope="row">Rango de IP:</th>
+            <td id="ipRange"></td>
+          </tr>
+          <tr>
+            <th scope="row">Bits de subred:</th>
+            <td id="subnetBits"></td>
+          </tr>
+          <tr>
+            <th scope="row">Número de subredes:</th>
+            <td id="subnetsR"></td>
+          </tr>
+          <tr>
+            <th scope="row">Bits de host:</th>
+            <td id="hostBits"></td>
+          </tr>
+          <tr>
+            <th scope="row">Hosts útiles:</th>
+            <td id="usableHosts"></td>
+          </tr>
+          <tr>
+            <th scope="row">Hosts totales:</th>
+            <td id="totalHosts"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="./js/main.js"></script>
+</html>
